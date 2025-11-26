@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Sentinel - Polygon AI Auditor",
+  "version": "1.0",
+  "description": "Instant AI Security Audit for Smart Contracts",
+  "permissions": ["activeTab","storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://app.uniswap.org/*", "https://opensea.io/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "logo.jfif",
+      "48": "logo.jfif",
+      "128": "logo.jfif"
+    }
+  },
+  "icons": {
+    "16": "logo.jfif",
+    "48": "logo.jfif",
+    "128": "logo.jfif"
+  }
+}

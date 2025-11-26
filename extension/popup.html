@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 320px; font-family: sans-serif; background: #000; color: white; padding: 15px; }
+    h1 { color: #a855f7; text-align: center; margin-top: 0; }
+    input { width: 100%; padding: 10px; margin-bottom: 10px; background: #222; border: 1px solid #444; color: white; box-sizing: border-box; border-radius: 5px; }
+    button { width: 100%; padding: 10px; background: #9333ea; color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 5px; }
+    button:hover { background: #7e22ce; }
+    #result { margin-top: 15px; padding: 10px; border-radius: 5px; display: none; }
+    .High { background: #450a0a; border: 1px solid #ef4444; }
+    .Medium { background: #422006; border: 1px solid #eab308; }
+    .Low { background: #052e16; border: 1px solid #22c55e; }
+  </style>
+</head>
+<body>
+  <h1>SENTINEL</h1>
+  <input type="text" id="address" placeholder="Paste Contract Address..." />
+  <button id="scanBtn">SCAN RISK</button>
+  <div id="result"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
