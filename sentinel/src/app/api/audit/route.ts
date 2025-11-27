@@ -63,7 +63,7 @@ export async function POST(request: Request) {
     // 5. AI AUDIT
     const completion = await client.chat.completions.create({
       messages: [
-        { role: "system", content: "You are a smart contract auditor. Return JSON only: { riskScore: number, riskLevel: 'Low'|'Medium'|'High', summary: string, keyIssues: string[] }" },
+      { role: "system", content: "You are a smart contract auditor. Analyze for security vulnerabilities. Return JSON only. schema: { riskScore: number (0-100, where 0 is SAFE and 100 is EXTREMELY DANGEROUS), riskLevel: 'Low'|'Medium'|'High', summary: string, keyIssues: string[] }" },
         { role: "user", content: `Analyze this code: \n\n ${sourceCode.substring(0, 20000)}` }
       ],
       model: "llama-3.3-70b-versatile",
